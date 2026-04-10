@@ -4,9 +4,13 @@
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat&logo=jupyter)
 ![Pandas](https://img.shields.io/badge/Pandas-2.0+-brightgreen?style=flat&logo=pandas)
 ![Plotly](https://img.shields.io/badge/Plotly-5.14+-purple?style=flat&logo=plotly)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.2+-orange?style=flat&logo=scikit-learn)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red?style=flat&logo=streamlit)
 ![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
-Análise exploratória de dados (EDA) completa para identificar padrões e causas relacionadas ao cancelamento de serviços. Este projeto utiliza Python, Jupyter Notebook e bibliotecas modernas de visualização para gerar insights acionáveis que podem ajudar empresas a reduzir a taxa de churn de clientes.
+Análise exploratória de dados (EDA) completa para identificar padrões e causas relacionadas ao cancelamento de serviços. Este projeto utiliza Python, Jupyter Notebook, Machine Learning e bibliotecas modernas de visualização para gerar insights acionáveis que podem ajudar empresas a reduzir a taxa de churn de clientes.
+
+**Status do Projeto:** ✅ Completo com Modelos Preditivos, Análise Temporal, Segmentação de Clientes e Dashboard Interativo
 
 ---
 
@@ -17,7 +21,10 @@ Análise exploratória de dados (EDA) completa para identificar padrões e causa
 - Analisar o impacto de diferentes variáveis no cancelamento (idade, tempo como cliente, tipo de assinatura, etc.)
 - Gerar visualizações profissionais e interativas
 - Fornecer insights e recomendações estratégicas baseadas em dados
-- Servir como base para desenvolvimento de modelos preditivos de churn
+- **Desenvolver modelos preditivos de churn com machine learning**
+- **Implementar análise temporal e sazonalidade**
+- **Realizar segmentação de clientes com clustering**
+- **Criar dashboard interativo para monitoramento**
 
 ---
 
@@ -56,14 +63,29 @@ analise_cancelamentos/
 ├── data/
 │   └── raw/
 │       └── cancelamentos_sample.csv   # Base de dados original
+├── src/
+│   ├── ml_pipeline.py                 # Pipeline de modelos preditivos (ML)
+│   ├── temporal_analysis.py           # Análise temporal e sazonalidade
+│   └── customer_segmentation.py       # Segmentação de clientes com clustering
+├── models/
+│   ├── best_churn_model.pkl           # Melhor modelo treinado
+│   ├── scaler.pkl                     # Normalizador de features
+│   └── label_encoders.pkl             # Codificadores de variáveis categóricas
 ├── outputs/
-│   └── figures/                       # Gráficos e visualizações gerados
-│       ├── distribuicao_categoricas.png
-│       ├── visao_geral_churn.png
-│       ├── churn_por_idade.png
-│       ├── churn_por_tempo_cliente.png
-│       ├── matriz_correlacao.png
-│       └── dashboard_completo.png
+│   ├── figures/                       # Gráficos e visualizações gerados
+│   │   ├── roc_curves.png             # Curvas ROC dos modelos
+│   │   ├── confusion_matrices.png     # Matrizes de confusão
+│   │   ├── feature_importance.png     # Importância das features
+│   │   ├── monthly_churn_trend.png    # Tendência mensal de churn
+│   │   ├── seasonal_churn_heatmap.png # Heatmap sazonal
+│   │   ├── cohort_retention.png       # Análise de coortes
+│   │   ├── clusters_2d.png            # Visualização 2D dos clusters
+│   │   ├── cluster_profiles.png       # Perfis dos segmentos
+│   │   └── interactive_*.html         # Visualizações interativas
+│   ├── churn_model_report.md          # Relatório dos modelos ML
+│   ├── temporal_analysis_report.md    # Relatório da análise temporal
+│   └── customer_segmentation_report.md # Relatório de segmentação
+├── dashboard.py                       # Dashboard interativo Streamlit
 ├── .gitignore                         # Arquivos ignorados pelo Git
 ├── LICENSE                            # Licença MIT
 ├── README.md                          # Esta documentação
