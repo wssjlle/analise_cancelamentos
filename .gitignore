@@ -1,8 +1,48 @@
-*.csv
-!data/raw/cancelamentos_sample.csv
-.ipynb_checkpoints/
-venv/
-.env/
+```
+# Python
 __pycache__/
-*.DS_Store
-desktop.ini
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.ENV.local
+.env
+.env.local
+.env.*
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+```
